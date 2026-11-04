@@ -1,0 +1,88 @@
+:root{
+  --sky:#aee1ff; --ink:#2f4a73; --blue:#4aa3e8; --pink:#ffb7d0; --paper:#fffdf8;
+  --card:rgba(255,255,255,.82); --shadow:0 10px 30px rgba(74,163,232,.25);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);background:linear-gradient(#d9f1ff,#eef9ff 40%,#fff4f8);min-height:100vh;overflow-x:hidden;line-height:1.6}
+h1,h2,.big,.v-main{font-family:'Fredoka',sans-serif}
+.hand{font-family:'Caveat',cursive;font-size:1.7rem;line-height:1.2}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+
+.bubbles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bubbles i{position:absolute;bottom:-40px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,rgba(255,255,255,.2) 60%,rgba(174,225,255,.5));border:1px solid rgba(255,255,255,.8);animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) translateX(20px)}}
+
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:24px 16px 56px;overflow:hidden;z-index:1}
+.hero-bg{position:absolute;inset:0;background:url(img/piscina.jpg) center/cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.1),rgba(217,241,255,.9))}
+.hero-card{position:relative;z-index:2;text-align:center;background:var(--card);backdrop-filter:blur(6px);border-radius:32px;padding:28px 20px 24px;max-width:460px;width:100%;box-shadow:var(--shadow)}
+.ep{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);font-weight:700}
+h1{font-size:clamp(2.6rem,12vw,4rem);line-height:1.05;margin:6px 0 4px;font-weight:600}
+h1 .acc{color:var(--blue)}
+.lead{font-size:1.15rem;font-weight:600}
+.hero-pet{width:150px;margin:6px auto -2px;animation:bob 3.5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-2deg)}}
+.counter{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:10px}
+.counter div{background:#fff;border-radius:14px;padding:8px 2px;box-shadow:0 3px 10px rgba(74,163,232,.15)}
+.counter b{display:block;font-family:'Fredoka';font-size:1.45rem;color:var(--blue);line-height:1.1}
+.counter small{font-size:.68rem;opacity:.75}
+.since{font-size:.8rem;opacity:.75;margin-top:10px}
+.float{position:absolute;z-index:1;width:110px;opacity:.95;animation:bob 5s ease-in-out infinite}
+.f1{top:6%;left:-18px;transform:rotate(-12deg)}.f2{bottom:9%;right:-12px;width:100px;animation-delay:-2s}
+.down{position:absolute;bottom:10px;z-index:2;font-size:2.4rem;color:var(--ink);text-decoration:none;animation:bob 2s infinite}
+
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:0 16px}
+.section{padding:44px 0 8px}
+h2{font-size:1.8rem;text-align:center;font-weight:500;margin-bottom:6px}
+.sub{text-align:center;opacity:.8;margin-bottom:16px}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.in{opacity:1;transform:none}
+
+.letter{position:relative;background:var(--paper);border-radius:8px 28px 8px 28px;padding:28px 22px 24px;box-shadow:var(--shadow);border:2px dashed #cfe9fb;margin-top:30px}
+.letter p{margin-bottom:12px}
+.big{font-size:1.55rem;line-height:1.25;color:var(--blue)}
+.sign{text-align:right;margin-bottom:0!important}
+.stamp{position:absolute;top:-26px;right:12px;width:84px;transform:rotate(8deg)}
+.shin{width:72px;border-radius:50%;margin:8px 0 0 auto;border:3px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.12)}
+
+.kiss{background:var(--card);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.kiss img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.kiss p{padding:16px 18px 18px}
+
+.polas{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px;margin-top:14px}
+.polas figure{background:#fff;padding:8px 8px 6px;border-radius:6px;box-shadow:var(--shadow);transform:rotate(-2deg)}
+.polas figure:nth-child(even){transform:rotate(2.5deg);margin-top:12px}
+.polas img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px}
+.polas figcaption{font-family:'Caveat',cursive;font-size:1.25rem;text-align:center;padding-top:2px}
+
+.scratch{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.voucher{display:flex;align-items:center;gap:8px;padding:20px 16px;background:repeating-linear-gradient(45deg,#fff,#fff 12px,#f3faff 12px,#f3faff 24px);border:3px dashed var(--blue);border-radius:22px;min-height:190px}
+.v-left{flex:1.3}
+.v-top{letter-spacing:.3em;font-weight:700;font-size:.8rem;color:var(--blue)}
+.v-main{font-size:2.1rem;line-height:1.1;color:#e0679a}
+.v-sub{font-weight:600;margin:4px 0 8px}
+.v-fine{font-size:.7rem;opacity:.7}
+.v-right{flex:1;display:grid;gap:4px}.v-right img{width:70px;margin:auto}
+#scratch-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;transition:opacity .7s}
+#scratch-canvas.done{opacity:0;pointer-events:none}
+.btn{display:block;margin:18px auto 0;font:600 1.05rem 'Fredoka';color:#fff;background:linear-gradient(135deg,#6bb8f0,#e98ab5);border:0;border-radius:999px;padding:12px 26px;box-shadow:0 6px 18px rgba(233,138,181,.45);cursor:pointer}
+.btn:active{transform:scale(.97)}
+.hint{text-align:center;margin-top:10px;font-weight:600}
+
+.player{position:relative;padding-top:42px}
+.p-pet{position:absolute;top:-4px;right:16px;width:96px;z-index:2;animation:bob 3s infinite}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.chips figure{background:var(--card);border-radius:22px;padding:14px 10px 10px;text-align:center;box-shadow:var(--shadow)}
+.chips svg{height:112px;width:auto;max-width:100%;margin:0 auto 6px;display:block}
+.chips figcaption{font-weight:700;font-size:.9rem}
+
+.foot{position:relative;z-index:1;text-align:center;padding:48px 16px 40px}
+.foot img{width:110px;border-radius:50%;margin:0 auto 8px;border:4px solid #fff;box-shadow:var(--shadow)}
+.tiny{font-size:.75rem;opacity:.6;margin-top:6px}
+#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}
+}

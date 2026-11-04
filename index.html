@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para mi ovejita</title>
+<meta name="description" content="Para Tefy, por 4 meses de intensa felicidad.">
+<meta name="theme-color" content="#aee1ff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐑%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fredoka:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bubbles" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <img class="float f1" src="img/orejitas.png" alt="" aria-hidden="true">
+  <img class="float f2" src="img/estrella.png" alt="" aria-hidden="true">
+  <div class="hero-card">
+    <p class="ep">Nuestra historia &middot; Capítulo <span class="js-cap">4</span></p>
+    <h1><span class="js-meses">4 meses</span><br><span class="acc">contigo</span></h1>
+    <p class="lead">Feliz aniversario, Tefy <span aria-hidden="true">🐑💙</span></p>
+    <img class="hero-pet" src="img/wink.png" alt="Cinnamoroll guiñando un ojo">
+    <div class="counter" id="counter">
+      <div><b id="c-m">0</b><small>meses</small></div>
+      <div><b id="c-d">0</b><small>días</small></div>
+      <div><b id="c-h">0</b><small>horas</small></div>
+      <div><b id="c-mi">0</b><small>min</small></div>
+      <div><b id="c-s">0</b><small>seg</small></div>
+    </div>
+    <p class="since">desde el momento en que supe que te elegiría por siempre a ti</p>
+  </div>
+  <a class="down" href="#carta" aria-label="Seguir bajando">&#8964;</a>
+</header>
+
+<main>
+  <section id="carta" class="section reveal">
+    <article class="letter">
+      <img class="stamp" src="img/corazon.png" alt="">
+      <p class="hand">Para mi ovejita,</p>
+      <p class="big">Gracias por <span class="js-meses">4 meses</span> de intensa felicidad.</p>
+      <p>Contigo hasta las tardes normales y frías se sienten como el día más cálido. Gracias por tu locura, por tus risas y por quedarte a mi lado.</p>
+      <p class="hand sign">Te quiero mucho, Tefy 💙</p>
+      <img class="shin" src="img/shin1.jpg" alt="Shin-chan saludando">
+    </article>
+  </section>
+
+  <section class="section reveal">
+    <h2>Aquel primer beso</h2>
+    <div class="kiss">
+      <img src="img/atmosfera.png" alt="Vasos de bobocha sobre una mesa">
+      <p>Esto se convirtió en mi batido favorito desde que te conocí 🧋</p>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2>Nuestros momentos</h2>
+    <div class="polas">
+      <figure><img src="img/momento1.jpg" alt="Dos bobochas de taro brindando" loading="lazy"><figcaption>salud 🧋</figcaption></figure>
+      <figure><img src="img/momento2.jpg" alt="Picnic con bobocha sobre el pasto" loading="lazy"><figcaption>picnic</figcaption></figure>
+      <figure><img src="img/momento3.jpg" alt="Un ramen delicioso" loading="lazy"><figcaption>ramencito</figcaption></figure>
+      <figure><img src="img/momento4.jpg" alt="Un postre para compartir" loading="lazy"><figcaption>postrecito</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2>Tengo algo para ti</h2>
+    <p class="sub">Raspa aquí con el dedo ✨</p>
+    <div class="scratch" id="scratch">
+      <div class="voucher">
+        <div class="v-left">
+          <p class="v-top">VALE POR</p>
+          <p class="v-main">1 Deseo</p>
+          <p class="v-sub">lo que tú quieras: un bobocha 🧋, una comida, un paseo... lo que se te antoje</p>
+          <p class="v-fine">Válido contigo, conmigo y sin fecha de vencimiento.</p>
+        </div>
+        <div class="v-right">
+          <img src="img/taro.png" alt="Bobocha de taro">
+          <img src="img/azucar.png" alt="Bobocha de azúcar acaramelada">
+        </div>
+      </div>
+      <canvas id="scratch-canvas" aria-label="Capa para raspar"></canvas>
+    </div>
+    <button class="btn" id="redeem" hidden>Canjear mi vale 💌</button>
+    <p class="hint" id="redeem-msg" hidden></p>
+  </section>
+
+  <section class="section reveal">
+    <h2>Nuestra canción</h2>
+    <p class="sub">Lo que suena cuando te pienso</p>
+    <div class="player">
+      <img class="p-pet" src="img/musica.png" alt="Cinnamoroll con audífonos">
+      <iframe style="border-radius:16px" src="https://open.spotify.com/embed/track/1ITcEqIHJwRU1oTBz4M0uE?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Nuestra canción en Spotify"></iframe>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2>Mis mejores pasatiempos</h2>
+    <div class="chips">
+      <figure>
+        <svg viewBox="0 0 200 150" role="img" aria-label="Dos personas abrazadas en un sofá bajo una manta">
+          <rect x="16" y="62" width="168" height="62" rx="24" fill="#cfe9fb"/>
+          <circle cx="82" cy="62" r="19" fill="#ffe3cf"/><path d="M63 60 q19-26 38 0 q-19-8-38 0z" fill="#4b3a3a"/>
+          <circle cx="76" cy="64" r="2" fill="#2f4a73"/><circle cx="90" cy="64" r="2" fill="#2f4a73"/><path d="M79 71 q4 3 8 0" stroke="#2f4a73" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="120" cy="64" r="19" fill="#ffe3cf"/><path d="M101 62 q19-30 38 0 q-4-4-6 4 q-14-12-32-4z" fill="#8a5a3c"/>
+          <circle cx="114" cy="66" r="2" fill="#2f4a73"/><circle cx="128" cy="66" r="2" fill="#2f4a73"/><path d="M117 73 q4 3 8 0" stroke="#2f4a73" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <rect x="8" y="92" width="184" height="44" rx="18" fill="#ffb7d0"/>
+          <circle cx="40" cy="112" r="4" fill="#fff" opacity=".7"/><circle cx="90" cy="122" r="4" fill="#fff" opacity=".7"/><circle cx="150" cy="110" r="4" fill="#fff" opacity=".7"/>
+          <path d="M100 38 c-9-11-22-2-12 9 l12 11 l12-11 c10-11-3-20-12-9z" fill="#e0679a"/>
+        </svg>
+        <figcaption>Pasar el rato contigo</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 200 150" role="img" aria-label="Dos personas caminando de la mano por un parque">
+          <circle cx="165" cy="30" r="15" fill="#ffe28a"/>
+          <path d="M0 128 Q100 98 200 128 V150 H0z" fill="#b8e6b0"/><path d="M70 150 Q100 118 128 150z" fill="#f5e3c0"/>
+          <rect x="29" y="82" width="6" height="30" fill="#b98a5e"/><circle cx="32" cy="72" r="20" fill="#8fd18a"/>
+          <circle cx="92" cy="74" r="9" fill="#ffe3cf"/><path d="M83 72 q9-13 18 0z" fill="#4b3a3a"/>
+          <path d="M92 84 v24" stroke="#4aa3e8" stroke-width="10" stroke-linecap="round"/><path d="M92 112 l-6 22 M92 112 l7 22" stroke="#2f4a73" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="120" cy="74" r="9" fill="#ffe3cf"/><path d="M111 72 q9-13 18 0 l2 12 l-4-6z" fill="#8a5a3c"/>
+          <path d="M120 84 v24" stroke="#ffb7d0" stroke-width="10" stroke-linecap="round"/><path d="M120 112 l-7 22 M120 112 l6 22" stroke="#2f4a73" stroke-width="4" stroke-linecap="round"/>
+          <path d="M97 96 h18" stroke="#ffe3cf" stroke-width="3" stroke-linecap="round"/>
+          <path d="M106 52 c-5-6-12-1-7 5 l7 6 l7-6 c5-6-2-11-7-5z" fill="#e0679a"/>
+        </svg>
+        <figcaption>Caminar</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 200 150" role="img" aria-label="Un tazón de ramen humeante con palillos">
+          <path d="M70 52 q-8-12 0-22 M100 52 q-8-12 0-26 M130 52 q-8-12 0-22" stroke="#9fd0f5" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M146 18 L104 84 M162 24 L122 88" stroke="#c98b5b" stroke-width="5" stroke-linecap="round"/>
+          <path d="M26 82 H174 A74 62 0 0 1 26 82z" fill="#4aa3e8"/>
+          <ellipse cx="100" cy="82" rx="74" ry="14" fill="#ffe9a8"/>
+          <path d="M44 82 q10-8 20 0 t20 0 t20 0 t20 0 t20 0 t20 0" stroke="#f2c862" stroke-width="3" fill="none"/>
+          <ellipse cx="78" cy="80" rx="15" ry="10" fill="#fff"/><circle cx="78" cy="80" r="5.5" fill="#ffb347"/>
+          <rect x="116" y="64" width="22" height="26" rx="2" fill="#35604a" transform="rotate(12 127 77)"/>
+          <circle cx="104" cy="88" r="3" fill="#7bc96f"/><circle cx="152" cy="84" r="3" fill="#7bc96f"/><circle cx="52" cy="86" r="3" fill="#7bc96f"/>
+          <path d="M70 136 h60" stroke="#2f4a73" stroke-width="5" stroke-linecap="round" opacity=".25"/>
+        </svg>
+        <figcaption>Comer</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 200 150" role="img" aria-label="Una carita riéndose a carcajadas">
+          <circle cx="100" cy="76" r="54" fill="#ffe28a" stroke="#2f4a73" stroke-width="3"/>
+          <path d="M66 62 q10-14 22 0 M112 62 q10-14 22 0" stroke="#2f4a73" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M68 88 q32 46 64 0z" fill="#7a2f3f" stroke="#2f4a73" stroke-width="3" stroke-linejoin="round"/>
+          <ellipse cx="100" cy="112" rx="14" ry="7" fill="#ff8fa8"/>
+          <path d="M52 78 q-9 14 0 14 q9 0 0-14z M148 78 q-9 14 0 14 q9 0 0-14z" fill="#7cc4f4"/>
+          <ellipse cx="62" cy="88" rx="9" ry="5" fill="#ffb7d0" opacity=".8"/><ellipse cx="138" cy="88" rx="9" ry="5" fill="#ffb7d0" opacity=".8"/>
+          <text x="164" y="30" font-family="Fredoka,sans-serif" font-size="20" fill="#4aa3e8" font-weight="600">ja!</text>
+          <text x="20" y="34" font-family="Fredoka,sans-serif" font-size="16" fill="#e0679a" font-weight="600">ja!</text>
+        </svg>
+        <figcaption>Reír</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="img/shin2.jpg" alt="Shin-chan haciendo la señal de paz">
+  <p class="hand">¡Felices <span class="js-meses">4 meses</span>, ovejita!!!!!!</p>
+  <p class="tiny">si lees esto que sepas que te quiero 💙</p>
+</footer>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
