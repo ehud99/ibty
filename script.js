@@ -40,7 +40,7 @@
   let parts = [];
   function confetti() {
     cv.width = innerWidth; cv.height = innerHeight;
-    const cols = ['#aee1ff', '#4aa3e8', '#ffb7d0', '#e98ab5', '#fff3b0', '#ffffff'];
+    const cols = ['#aee1ff', '#4aa3e8', '#c4a8f0', '#9a7bdc', '#ffb7d0', '#ffffff'];
     const idle = parts.length === 0;
     for (let i = 0; i < 160; i++) parts.push({ x: innerWidth / 2, y: innerHeight * .6, vx: (Math.random() - .5) * 14, vy: -Math.random() * 16 - 4, r: 4 + Math.random() * 6, c: cols[i % cols.length], a: Math.random() * 6, life: 0 });
     if (idle) loop();
@@ -95,10 +95,65 @@
   let rw = innerWidth;
   addEventListener('resize', () => { if (!done && innerWidth !== rw) { rw = innerWidth; paint(); } });
 
+  // Sobre de bienvenida
+  const intro = $('intro');
+  $('env-btn').addEventListener('click', () => {
+    if (intro.classList.contains('open')) return;
+    intro.classList.add('open');
+    setTimeout(() => {
+      intro.classList.add('gone');
+      document.body.classList.remove('locked');
+      confetti();
+      setTimeout(() => { intro.hidden = true; }, 900);
+    }, 1900);
+  });
+
+  // Sorpresa oculta: tocar 4 veces a Cinnamoroll (uno por cada mes)
+  const pet = $('pet'), psst = $('psst'), secret = $('secret');
+  let taps = 0, tapTimer;
+  setTimeout(() => psst.classList.add('show'), 9000);
+  function popHeart(x, y) {
+    const h = document.createElement('span');
+    h.className = 'pop-heart'; h.textContent = '💜';
+    h.style.left = x - 10 + 'px'; h.style.top = y - 10 + 'px';
+    h.style.setProperty('--dx', (Math.random() * 60 - 30) + 'px');
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 1000);
+  }
+  function heartRain() {
+    const hearts = ['💜', '💙', '🤍', '🩷'];
+    for (let i = 0; i < 36; i++) {
+      const h = document.createElement('span');
+      h.className = 'rain-heart'; h.textContent = hearts[i % hearts.length];
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.fontSize = 16 + Math.random() * 22 + 'px';
+      h.style.animationDuration = 2.5 + Math.random() * 2.5 + 's';
+      h.style.animationDelay = Math.random() * 1.5 + 's';
+      h.style.setProperty('--r', (Math.random() * 360 - 180) + 'deg');
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 6500);
+    }
+  }
+  pet.addEventListener('click', e => {
+    pet.classList.remove('boing'); void pet.offsetWidth; pet.classList.add('boing');
+    popHeart(e.clientX, e.clientY);
+    psst.classList.remove('show');
+    clearTimeout(tapTimer);
+    tapTimer = setTimeout(() => { taps = 0; }, 2500);
+    if (++taps >= 4) {
+      taps = 0;
+      heartRain();
+      secret.hidden = false;
+      $('secret-close').focus();
+    }
+  });
+  $('secret-close').addEventListener('click', () => { secret.hidden = true; confetti(); });
+  secret.addEventListener('click', e => { if (e.target === secret) secret.hidden = true; });
+
   $('redeem').addEventListener('click', () => {
     const m = $('redeem-msg');
     m.hidden = false;
-    m.textContent = 'Canjeado 💙 Mándame una captura y dime cuál es tu deseo, ovejita.';
+    m.textContent = 'Canjeado 💙 Mándame una captura y dime qué eliges, ovejita.';
     confetti();
   });
 })();

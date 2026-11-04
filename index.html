@@ -10,9 +10,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fredoka:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
-<body>
+<body class="locked">
+<div class="intro" id="intro">
+  <button class="env-btn" id="env-btn" aria-label="Abrir el sobre">
+    <span class="env">
+      <span class="env-back"></span>
+      <span class="env-letter"><span class="hand">Feliz aniversario,</span><b>Tefy 💜</b></span>
+      <span class="env-front"></span>
+      <span class="env-flap"></span>
+      <span class="env-seal">💜</span>
+    </span>
+    <span class="env-to hand">Para mi ovejita</span>
+    <span class="env-tap">toca el sobre para abrirlo</span>
+  </button>
+</div>
 <div class="bubbles" aria-hidden="true"></div>
 
 <header class="hero">
@@ -23,7 +36,10 @@
     <p class="ep">Nuestra historia &middot; Capítulo <span class="js-cap">4</span></p>
     <h1><span class="js-meses">4 meses</span><br><span class="acc">contigo</span></h1>
     <p class="lead">Feliz aniversario, Tefy <span aria-hidden="true">🐑💙</span></p>
-    <img class="hero-pet" src="img/wink.png" alt="Cinnamoroll guiñando un ojo">
+    <div class="pet-wrap">
+      <img class="hero-pet" id="pet" src="img/wink.png" alt="Cinnamoroll guiñando un ojo">
+      <span class="psst" id="psst" aria-hidden="true">psst...</span>
+    </div>
     <div class="counter" id="counter">
       <div><b id="c-m">0</b><small>meses</small></div>
       <div><b id="c-d">0</b><small>días</small></div>
@@ -73,11 +89,12 @@
       <div class="voucher">
         <div class="v-left">
           <p class="v-top">VALE POR</p>
-          <p class="v-main">1 Deseo</p>
-          <p class="v-sub">lo que tú quieras: un bobocha 🧋, una comida, un paseo... lo que se te antoje</p>
+          <p class="v-main">lo que tú quieras</p>
+          <p class="v-sub">Tú eliges, yo lo cumplo 🧋💜</p>
           <p class="v-fine">Válido contigo, conmigo y sin fecha de vencimiento.</p>
         </div>
         <div class="v-right">
+          <span class="v-heart" aria-hidden="true">💜</span>
           <img src="img/taro.png" alt="Bobocha de taro">
           <img src="img/azucar.png" alt="Bobocha de azúcar acaramelada">
         </div>
@@ -235,7 +252,15 @@
   <p class="tiny">si lees esto que sepas que te quiero 💙</p>
 </footer>
 
+<div class="secret" id="secret" hidden>
+  <div class="secret-card" role="dialog" aria-modal="true" aria-labelledby="secret-title">
+    <img src="img/corazon.png" alt="">
+    <p class="secret-title" id="secret-title">¡Encontraste mi secreto!</p>
+    <p>Cada día contigo es mi parte favorita. Te quiero muchísimo, ovejita.</p>
+    <button class="btn" id="secret-close">Yo también te quiero 💜</button>
+  </div>
+</div>
 <canvas id="confetti" aria-hidden="true"></canvas>
-<script src="script.js"></script>
+<script src="script.js?v=2"></script>
 </body>
 </html>
